@@ -30,7 +30,9 @@
 
 ###
 
-<p align="left">- [CTF ignite](https://github.com/JJH0204/Ignite_CTF)<br>- [Flmae WarGame](https://github.com/JJH0204/Flame)<br>- [DevSecOps 환경 구축 가이드](https://jinyeong001.github.io/DevSecOps.Full-Project/)</p>
+<p align="left">- <a href="https://github.com/JJH0204/Ignite_CTF">CTF Ignite</a><br>
+  - <a href="https://github.com/JJH0204/Flame">Flame WarGame</a><br>
+  - <a href="https://jinyeong001.github.io/DevSecOps.Full-Project/">DevSecOps 환경 구축 가이드</a><br>
 
 ###
 
