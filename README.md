@@ -1,7 +1,8 @@
 # Hi Welcome, I'm JINYEONG 👋
 
 💾About me
-[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:wkddud1793@gmail.com)](wkddud1793@gmail.com)
+
+[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:wkddud1793)](wkddud1793@gmail.com)
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jinyeong001&show_icons=true&theme=radical)
 
