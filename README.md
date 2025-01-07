@@ -21,7 +21,7 @@
 
 ###
 
-<p align="left">- 🔭 I’m working as cloud secure<br>- 📚 I'm currently learning Jenkins, Kubernetes, and AWS EC2<br>- ⚡ In my free time I ...</p>
+<p align="left">- 🔭 I’m working as Cloud Security Beginner <br>- 📚 I'm currently learning Jenkins, Kubernetes, and AWS EC2<br>- ⚡ In my free time I ...</p>
 
 ###
 
