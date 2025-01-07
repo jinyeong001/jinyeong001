@@ -22,7 +22,15 @@
 
 ###
 
-<p align="left">- 🔭 I’m working as Cloud Security Beginner<br>- 📚 I'm currently learning Jenkins, Kubernetes, and AWS EC2<br>- ⚡ In my free time I ...</p>
+<p align="left">- 🔭 I’m working as a member of team Firewall<br>- 📚 I'm currently learning Jenkins, Kubernetes, and AWS EC2<br>- ⚡ In my free time I ...</p>
+
+###
+
+<h3 align="left">🔥 Projects</h3>
+
+###
+
+<p align="left">- [CTF ignite](https://github.com/JJH0204/Ignite_CTF)<br>- [Flmae WarGame](https://github.com/JJH0204/Flame)<br>- [DevSecOps 환경 구축 가이드](https://jinyeong001.github.io/DevSecOps.Full-Project/)</p>
 
 ###
 
