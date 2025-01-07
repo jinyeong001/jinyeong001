@@ -1,6 +1,6 @@
 <img align="left" height="150" src="https://avatars.githubusercontent.com/u/147812424?v=4"  />
+<br><br>
 
-###
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="42" height="30" alt="gmail logo"  />
