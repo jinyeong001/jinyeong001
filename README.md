@@ -1,5 +1,3 @@
-<img align="left" height="150" src="https://avatars.githubusercontent.com/u/147812424?v=4"  />
-<br><br>
 
 <div align="center">
   <a href="mailto:wkddud1793@gmail.com" target="_blank">
