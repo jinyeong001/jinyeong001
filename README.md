@@ -15,7 +15,7 @@
 ###
 
 <p align="left">안녕하세요.👋 <strong>장진영</strong>입니다!😀<br>
-저의 Git profile에 오신것을 환영합니다.<br>
+저의 Github profile에 오신것을 환영합니다!!<br>
 저는 <strong>보안전문가</strong>를 꿈꾸며 현재 <strong>정보보안</strong>에 관심을 가지고 있는 신입 개발자입니다.<br>
 기초부터 시작하여 전문가가 될 저의 성장을 봐 주세요!</p>
 
