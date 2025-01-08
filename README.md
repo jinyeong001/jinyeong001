@@ -1,7 +1,7 @@
 ###
 
 <div align= "center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&text=안녕하세요!👋 %20JINYEONG입니다.%20반가워요~&animation=&fontColor=000000&fontSize=40" />
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&text=안녕하세요!👋%20JINYEONG입니다.%20반가워요~&animation=&fontColor=000000&fontSize=40" />
 </div>
     
 ###
