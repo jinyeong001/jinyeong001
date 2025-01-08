@@ -37,8 +37,8 @@
 
 <h2 align="left">🔗 Portfolio</h3>
   <div style="margin: 0; text-align: left;">
-    <a href="https://jinyeong001.github.io/jinyeong001/">
-      <img src="https://img.shields.io/badge/Portfolio-222222?style=for-the-badge&logo=GitHub Pages&logoColor=white">
+    <a href="https://jinyoung0215.notion.site/IT-d8d55d4390cc4f8e8816c4f58e7f7b37?pvs=4" target="_blank">
+      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=Notion&logoColor=white" />
     </a>
   </div>
 
