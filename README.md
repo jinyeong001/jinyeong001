@@ -21,10 +21,10 @@
 
 <div style="font-weight: 600; font-size: 14px; text-align: left;"> 🎯 관심 분야 </div>
 
-  - 🌐 보안 관제: 관제 솔루션 구축 및 운영 경험 (Wazuh, ELK Stack 등)
-  - 🚨 악성 코드 분석: PracticeMalwareAnalysis를 이용해 정적/ 동적 분석 학습 중 (OllyDbg, IDA Pro 등)
-  - 💻 모의 해킹: vlunhub를 이용해 여러 CTF 모의 해킹 연습 및 보고서 작성 (Metasploit, Nmap, Wireshark 등)
-  - 🔒 보안 정책 작성: IDS/IPS 시스템의 룰 작성 및 운영 경험 (WAF, Snort, Suricata 등)
+  - 🌐 보안 관제: 관제 솔루션 구축 및 운영 경험 (Wazuh, ELK Stack ..)
+  - 🚨 악성 코드 분석: PracticeMalwareAnalysis를 이용해 정적/ 동적 분석 학습 중 (OllyDbg, IDA Pro ..)
+  - 💻 모의 해킹: vlunhub를 이용해 여러 CTF 모의 해킹 연습 및 보고서 작성 (Metasploit, Nmap, Wireshark ..)
+  - 🔒 보안 정책 작성: IDS/IPS 시스템의 룰 작성 및 운영 경험 (WAF, Snort, Suricata ..)
 
 ###
 
