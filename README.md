@@ -23,7 +23,7 @@
 
   - 🌐 보안 관제: 관제 솔루션 구축 및 운영 경험 (Wazuh, ELK Stack 등)
   - 🚨 악성 코드 분석: PracticeMalwareAnalysis를 이용해 정적/ 동적 분석 학습 중 (OllyDbg, IDA Pro 등)
-  - 💻 모의 해킹: vlunhub를 이용해 모의 해킹 연습(Metasploit, Nmap, Wireshark 등)
+  - 💻 모의 해킹: vlunhub를 이용해 여러 CTF 모의 해킹 연습 및 보고서 작성 (Metasploit, Nmap, Wireshark 등)
 
 ###
 
