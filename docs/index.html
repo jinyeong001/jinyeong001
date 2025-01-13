@@ -51,7 +51,7 @@
 			padding: 20px;
 			cursor: pointer;
 			position: relative;
-			aspect-ratio: 1; /* 정사각형 비율 유지 */
+			aspect-ratio: 1;
 			width: 100%;
 			margin-bottom: 30px;
 			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -139,7 +139,6 @@
 			font-size: 0.9rem;
 		}
 
-		/* 기존 스타일은 유지하고 모달 중앙 정렬을 위한 스타일 추가 */
 		.modal-dialog {
 			display: flex;
 			align-items: center;
@@ -152,9 +151,46 @@
 			}
 		}
 
-		/* 기존 스타일은 유지하고 주요 업무 목록의 간격 조정을 위한 스타일 추가 */
 		.modal-body .pl-3 p {
-			margin-bottom: 0.5rem;  /* 기존 1rem(16px)에서 0.5rem(8px)으로 줄임 */
+			margin-bottom: 0.5rem; 
+		}
+
+		.number {
+			color: #3e64ff;
+			font-weight: bold;
+			font-size: 25px;
+			margin-right: 2px;
+		}
+
+		.ignite-bg {
+			background: url('images/ignite.png') center 25%/60% no-repeat !important;
+		}
+
+		.flame-bg {
+			background: url('images/Flame_logo2.png') center 25%/60% no-repeat !important;
+		}
+
+		.koreait-bg {
+			background: url('images/koreait.png') center 25%/60% no-repeat !important;
+		}
+
+		.project-card .card-body {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end !important;
+			padding-bottom: 30px !important;
+		}
+
+		.project-card h3 {
+			margin-top: auto;
+			margin-bottom: 10px;
+		}
+
+		/* DevSecOps 프로젝트 제목에 대한 특별 스타일 */
+		.project-card.koreait-bg h3 {
+			font-size: 1.3rem;  /* 더 작은 폰트 크기 */
+			line-height: 1.2;   /* 줄 간격 조정 */
+			margin-bottom: 10px;
 		}
 	</style>
 </head>
@@ -226,7 +262,7 @@
 								기초부터 시작하여 전문가가 될 저의 성장을 봐 주세요!</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
 								<li class="d-flex"><span>Name:</span> <span>장진영</span></li>
-								<li class="d-flex"><span>Address:</span> <span>대구시 북구 침산동</span></li>
+								<li class="d-flex"><span>Address:</span> <span>대구광역시 북구 침산동</span></li>
 								<li class="d-flex"><span>Email:</span> <span>wkddud1793@gmail.com</span></li>
 								<li class="d-flex"><span>Phone: </span> <span>+82-10-6658-1793</span></li>
 							</ul>
@@ -235,7 +271,7 @@
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" data-number="3">0</span>
+								<span class="number">3</span>
 								<span>Project complete</span>
 							</p>
 							<p><a target="_blank"
@@ -284,7 +320,7 @@
 						<div class="row">
 							<!-- Project 1 -->
 							<div class="col-md-4">
-								<div class="project-card" data-toggle="modal" data-target="#project1Modal">
+								<div class="project-card ignite-bg" data-toggle="modal" data-target="#project1Modal">
 									<div class="card-body text-center">
 										<h3>CTF machine: Ignite</h3>
 										<small class="text-muted">Team Firewall</small>
@@ -297,7 +333,7 @@
 
 							<!-- Project 2 -->
 							<div class="col-md-4">
-								<div class="project-card" data-toggle="modal" data-target="#project2Modal">
+								<div class="project-card flame-bg" data-toggle="modal" data-target="#project2Modal">
 									<div class="card-body text-center">
 										<h3>WarGame: Flame</h3>
 										<small class="text-muted">Team Firewall</small>
@@ -310,9 +346,9 @@
 
 							<!-- Project 3 -->
 							<div class="col-md-4">
-								<div class="project-card" data-toggle="modal" data-target="#project3Modal">
+								<div class="project-card koreait-bg" data-toggle="modal" data-target="#project3Modal">
 									<div class="card-body text-center">
-										<h3>2025 DevSecOps 환경 구축 가이드</h3>
+										<h3>DevSecOps 환경 구축 가이드</h3>
 										<small class="text-muted">Team KoreaIT</small>
 										<div class="project-overlay">
 											<span>Click to view details</span>
