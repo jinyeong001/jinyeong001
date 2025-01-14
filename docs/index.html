@@ -175,6 +175,10 @@
 			background: url('images/koreait.png') center 40%/55% no-repeat !important;
 		}
 
+		.shell-bg {
+			background: url('images/shell.png') center 40%/55% no-repeat !important;
+		}
+
 		.project-card .card-body {
 			display: flex;
 			flex-direction: column;
@@ -233,7 +237,7 @@
 						<h1>장진영</h1>
 						<h2>I'm a
 							<span class="txt-rotate" data-period="500"
-								data-rotate='["신입 개발자", "보안 전문가", "네트워크 전문가"]'></span>
+								data-rotate='["신입 개발자", "보안 주니어", "네트워크 주니어"]'></span>
 						</h2>
 					</div>
 				</div>
@@ -276,7 +280,7 @@
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number">3</span>
+								<span class="number">4</span>
 								<span>Project complete</span>
 							</p>
 							<p><a target="_blank"
@@ -349,6 +353,17 @@
 					<div class="project-card flame-bg" data-toggle="modal" data-target="#flameModal">
 						<div class="card-body">
 							<h3>WarGame: Flame</h3>
+							<small>Team Firewall</small>
+						</div>
+						<div class="project-overlay">
+							<span>자세히 보기</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="project-card shell-bg" data-toggle="modal" data-target="#shellModal">
+						<div class="card-body">
+							<h3>Linux Shell Script</h3>
 							<small>Team Firewall</small>
 						</div>
 						<div class="project-overlay">
@@ -878,7 +893,7 @@
 				</div>
 				<div class="modal-body">
 					<span class="date">2024.12-2025.02(3개월)</span>
-					<h6 class="mt-2 text-primary">Team KoreaIT: 팀 프로젝트 3</h6>
+					<h6 class="mt-2 text-primary">Team KoreaIT: 팀 프로젝트 1</h6>
 					<p>DevSecOps 환경을 구축하고 보안을 강화하는 과정을 통해 클라우드 보안 전문가로서의 역량을 키웠습니다.</p>
 					
 					<h6 class="text-primary mt-4">기술 스택</h6>
@@ -901,6 +916,49 @@
 						</a>
 						<a href="가이드문서.pdf" class="btn btn-primary mb-2" target="_blank">
 							VIEW DOCUMENT <i class="bi bi-file-earmark-pdf"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Shell Script Modal -->
+	<div class="modal fade" id="shellModal" tabindex="-1" role="dialog" aria-labelledby="shellModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title font-weight-bold">Rocky Linux 취약점 분석 Shell Script</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<span class="date">2024.10-2024.10(2주)</span>
+					<h6 class="mt-2 text-primary">Team KoreaIT: 팀 프로젝트 3</h6>
+					<p>Rocky Linux 환경의 기술적 취약점을 분석하고 취약한 부분을 알려주는 Shell Script 작성을 통하여 Shell Script 작성법과 다양한 Linux의 취약점 관리 기술을 터득하였습니다.</p>
+					
+					<h6 class="text-primary mt-4">기술 스택</h6>
+					<p>Rocky Linux, Shell Script, Bash</p>
+					
+					<h6 class="text-primary mt-4">주요 업무</h6>
+					<div class="pl-3">
+						<p>- 출력 스타일 수정 및 결과 저장 기능 구축</p>
+						<p>- Rocky Linux에 없는 점검 항목 파악 및 작성할 점검 항목 분류</p>
+						<p>- 계정 관리 및 서비스 관리 점검 항목 스크립트 작성</p>
+					</div>
+
+					<h6 class="text-primary mt-4">참고 문헌</h6>
+					<div class="pl-3">
+						<p>- 주요정보통신기반시설 기술적 취약점 분석평가 방법 상세가이드</p>
+					</div>
+					
+					<div class="mt-4">
+						<a href="https://jinyeong001.github.io/jinyeong001/script.sh" download="script.sh" class="btn btn-primary">
+							DOWNLOAD SCRIPT <i class="bi bi-box-arrow-up-right"></i>
+						</a>
+						<a href="script.pdf" target="_blank" class="btn btn-primary mr-2">
+							VIEW REFERENCE <i class="bi bi-file-earmark-pdf"></i>
 						</a>
 					</div>
 				</div>
