@@ -475,3 +475,20 @@
     border-radius: 10px;
 }
 
+/* Education 섹션 스타일 */
+#education-section .resume-wrap {
+    max-width: 800px;
+    margin: 0 auto;   
+    width: 100%;    
+}
+
+#education-section .text {
+    max-width: 1000px;
+}
+
+#education-section p {
+    max-width: 900px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
