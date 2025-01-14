@@ -29,21 +29,31 @@
     font-weight: 600 !important;
     box-shadow: none !important;
     position: relative !important;
+    transition: color 0.3s ease !important;
 }
 
-#labs-section .filter-buttons .btn.filter-btn.active,
-#labs-section .filter-buttons .btn.filter-btn:hover {
+#labs-section .filter-buttons .btn.filter-btn::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: #4169e1 !important;
+    transition: all 0.3s ease !important;
+    transform: translateX(-50%) !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn:hover::after {
+    width: 100% !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn.active {
     color: #4169e1 !important;
 }
 
 #labs-section .filter-buttons .btn.filter-btn.active::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: -2px !important;
-    left: 0 !important;
     width: 100% !important;
-    height: 2px !important;
-    background-color: #4169e1 !important;
 }
 
 .labs-grid {
@@ -109,7 +119,7 @@
     height: 100% !important;
 }
 
-/* 섹션 간격 ��절 */
+/* 섹션 간격 조절 */
 .ftco-section {
     padding: 4em 0 !important; /* 기존 7em에서 4em으로 줄임 */
 }
@@ -122,4 +132,179 @@
 /* 섹션 내부 제목과 콘텐츠 사이 간격 조절 */
 .row.justify-content-center.pb-5 {
     padding-bottom: 2rem !important; /* 기존 3rem에서 2rem으로 줄임 */
+}
+
+/* 버튼 호�� 효과 */
+.btn-primary, .box {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact 박스 호버 효과 */
+.box.text-center {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box.text-center:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 프로젝트 카드 스타일 */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 1;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card small {
+    color: #666;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay span {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    .project-card {
+        height: 180px;
+    }
+}
+
+/* 부트스트랩 기본 스타일 덮어쓰기 */
+.card-body {
+    flex: none !important;
+}
+
+.col-md-4 {
+    margin-bottom: 30px;
+}
+
+/* 모달 스타일 */
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 20px 30px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body .date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        min-height: calc(100% - 3.5rem);
+    }
+}
+
+.modal-body .pl-3 p {
+    margin-bottom: 0.5rem; 
+}
+
+.number {
+    color: #3e64ff;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 2px;
+}
+
+/* 프로젝트 배경 이미지 */
+.ignite-bg {
+    background: url('../images/ignite.png') center 40%/70% no-repeat !important;
+}
+
+.flame-bg {
+    background: url('../images/Flame_logo2.png') center 35%/65% no-repeat !important;
+}
+
+.koreait-bg {
+    background: url('../images/koreait.png') center 40%/55% no-repeat !important;
+}
+
+.shell-bg {
+    background: url('../images/shell.png') center 40%/55% no-repeat !important;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end !important;
+    padding-bottom: 15px !important;
+}
+
+.project-card h3 {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.project-card.koreait-bg h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
