@@ -1,0 +1,125 @@
+#labs-section.page {
+    padding: 7em 0;
+}
+
+#labs-section .heading {
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    color: #4169e1 !important;
+    margin-bottom: 40px !important;
+    text-transform: none !important;
+}
+
+#labs-section .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+#labs-section .filter-buttons .btn.filter-btn {
+    border: none !important;
+    margin: 5px !important;
+    padding: 8px 16px !important;
+    background: transparent !important;
+    color: #333 !important;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    position: relative !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn.active,
+#labs-section .filter-buttons .btn.filter-btn:hover {
+    color: #4169e1 !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn.active::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: #4169e1 !important;
+}
+
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100%;
+}
+
+.lab-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+.lab-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.lab-item-content:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.lab-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.heading-section h2.heading,
+.heading-section .heading {
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    color: #4169e1 !important;
+    margin-bottom: 5px !important;
+    text-transform: none !important;
+}
+
+.progress-circle {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+}
+
+.progress-circle .col-lg-4 {
+    width: 33.33% !important;
+    padding: 0 15px !important;
+}
+
+.progress-circle .bg-white {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 섹션 간격 ��절 */
+.ftco-section {
+    padding: 4em 0 !important; /* 기존 7em에서 4em으로 줄임 */
+}
+
+/* About 섹션은 예외적으로 처리 (hero 섹션과 연결되어 있어서) */
+#about-section.ftco-section {
+    padding-top: 0em !important;
+}
+
+/* 섹션 내부 제목과 콘텐츠 사이 간격 조절 */
+.row.justify-content-center.pb-5 {
+    padding-bottom: 2rem !important; /* 기존 3rem에서 2rem으로 줄임 */
+}
