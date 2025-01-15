@@ -362,9 +362,24 @@
     background: url('../images/zabbix.png') center/contain no-repeat;
 }
 
-/* CTF 아이템 배경 이미지 추가 */
 .lab-item-content.ctf {
     background: url('../images/ctf.JPG') center/contain no-repeat;
+}
+
+.lab-item-content.docker {
+    background: url('../images/docker.png') center/contain no-repeat;
+}
+
+.lab-item-content.jenkins {
+    background: url('../images/jenkins.png') center/contain no-repeat;
+}
+
+.lab-item-content.kali {
+    background: url('../images/kali.png') center/contain no-repeat;
+}
+
+.lab-item-content.mysql {
+    background: url('../images/mysql.png') center/contain no-repeat;
 }
 
 /* 이미지 스타일 */
@@ -382,7 +397,11 @@
 .lab-item-content.wireshark,
 .lab-item-content.wordpress,
 .lab-item-content.zabbix,
-.lab-item-content.ctf {
+.lab-item-content.ctf,
+.lab-item-content.docker,
+.lab-item-content.jenkins,
+.lab-item-content.kali,
+.lab-item-content.mysql {
     background-size: 95% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;

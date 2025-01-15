@@ -61,7 +61,7 @@
 						<h1>장진영</h1>
 						<h2>I'm a
 							<span class="txt-rotate" data-period="500"
-								data-rotate='["신입 개발자", "보안 주니어", "네트워크 주니어"]'></span>
+								data-rotate='["신입 개발자", "정보보안 엔지니어", "네트워크 엔지니어"]'></span>
 						</h2>
 					</div>
 				</div>
@@ -94,9 +94,10 @@
 								기초부터 시작하여 전문가가 될 저의 성장을 봐 주세요!</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
 								<li class="d-flex"><span>Name:</span> <span>장진영</span></li>
+								<li class="d-flex"><span>Birth:</span> <span>1997. 06. 19</span></li>
 								<li class="d-flex"><span>Address:</span> <span>대구광역시 북구 침산동</span></li>
 								<li class="d-flex"><span>Email:</span> <span>wkddud1793@gmail.com</span></li>
-								<li class="d-flex"><span>Phone: </span> <span>+82-10-6658-1793</span></li>
+								<li class="d-flex"><span>Phone: </span> <span>010-6658-1793</span></li>
 							</ul>
 						</div>
 					</div>
@@ -143,7 +144,7 @@
 					<div class="text pl-3">
 						<span class="date">2024.09-2025.02</span>
 						<h2>DevSecOps를 활용한 클라우드 보안 전문가 양성과정</h2>
-						<span class="position">Korea IT Daegu</span>
+						<span class="position">Korea IT Academy Daegu</span>
 						<p>클라우드와 보안의 기본 개념과 특징 등 정보보안과 관련된 기반지식을 바탕으로 클라우드 보안 설계,<br> 
 							보안서비스 구축 실무 능력 함양과 클라우드 아키텍처 및 거버넌스를 수립할 수 있는 역량을 공부하였습니다.</p>
 					</div>
@@ -220,12 +221,13 @@
 			<div class="filter-buttons ftco-animate text-center">
 				<button type="button" class="btn filter-btn active" data-filter="all">ALL</button>
 				<button type="button" class="btn filter-btn" data-filter="app">APPLICATION</button>
-				<button type="button" class="btn filter-btn" data-filter="ctf">CTF</button>
+				<button type="button" class="btn filter-btn" data-filter="hacking">HACKING</button>
 				<button type="button" class="btn filter-btn" data-filter="dashboard">DASHBOARD</button>
 				<button type="button" class="btn filter-btn" data-filter="devops">DEVOPS</button>
 				<button type="button" class="btn filter-btn" data-filter="ids">IDS</button>
 				<button type="button" class="btn filter-btn" data-filter="malware">MALWARE</button>
 				<button type="button" class="btn filter-btn" data-filter="network">NETWORK</button>
+				<button type="button" class="btn filter-btn" data-filter="sql">SQL</button>
 			</div>
 			<div class="labs-grid ftco-animate">
 				<!-- APM -->
@@ -523,7 +525,7 @@
 				</div>
 
 				<!-- CTF1 -->
-				<div class="lab-item" data-category="ctf">
+				<div class="lab-item" data-category="hacking">
 					<div class="lab-item-content ctf">
 						<div class="lab-item-overlay">
 							<span>View details</span>
@@ -533,7 +535,7 @@
 							<div class="category">
 								<script>
 									document.write(
-										'CTF'.split(',').map(cat => 
+										'Hacking'.split(',').map(cat => 
 											`<span class="category-tag">${cat.trim()}</span>`
 										).join(' ')
 									);
@@ -543,18 +545,81 @@
 					</div>
 				</div>
 
-				<!-- CTF2 -->
-				<div class="lab-item" data-category="ctf">
-					<div class="lab-item-content ctf">
+				<!-- Docker -->
+				<div class="lab-item" data-category="devops">
+					<div class="lab-item-content docker">
 						<div class="lab-item-overlay">
 							<span>View details</span>
 						</div>
 						<div class="lab-item-info">
-							<h3>CTF2</h3>
+							<h3>Docker</h3>
 							<div class="category">
 								<script>
 									document.write(
-										'CTF'.split(',').map(cat => 
+										'DevOps'.split(',').map(cat => 
+											`<span class="category-tag">${cat.trim()}</span>`
+										).join(' ')
+									);
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Jenkins -->
+				<div class="lab-item" data-category="devops">
+					<div class="lab-item-content jenkins">
+						<div class="lab-item-overlay">
+							<span>View details</span>
+						</div>
+						<div class="lab-item-info">
+							<h3>Jenkins</h3>
+							<div class="category">
+								<script>
+									document.write(
+										'DevOps'.split(',').map(cat => 
+											`<span class="category-tag">${cat.trim()}</span>`
+										).join(' ')
+									);
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Kali -->
+				<div class="lab-item" data-category="hacking">
+					<div class="lab-item-content kali">
+						<div class="lab-item-overlay">
+							<span>View details</span>
+						</div>
+						<div class="lab-item-info">
+							<h3>Kali Linux</h3>
+							<div class="category">
+								<script>
+									document.write(
+										'Hacking'.split(',').map(cat => 
+											`<span class="category-tag">${cat.trim()}</span>`
+										).join(' ')
+									);
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MySQL -->
+				<div class="lab-item" data-category="sql">
+					<div class="lab-item-content mysql">
+						<div class="lab-item-overlay">
+							<span>View details</span>
+						</div>
+						<div class="lab-item-info">
+							<h3>MySQL</h3>
+							<div class="category">
+								<script>
+									document.write(
+										'SQL'.split(',').map(cat => 
 											`<span class="category-tag">${cat.trim()}</span>`
 										).join(' ')
 									);
