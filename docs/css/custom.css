@@ -281,7 +281,7 @@
 }
 
 .shell-bg {
-    background: url('../images/shell.png') center 40%/55% no-repeat !important;
+    background: url('../images/shell/shell.png') center 40%/55% no-repeat !important;
 }
 
 .project-card .card-body {
