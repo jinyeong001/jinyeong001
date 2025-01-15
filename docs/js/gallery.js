@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentImageIndex = 0;
     const images = [
-        '../images/shell/1.png',
-        '../images/shell/2.png',
-        '../images/shell/3.png',
-        '../images/shell/4.png',
-        '../images/shell/5.png'
+        '../jinyeong001/images/shell/1.png',
+        '../jinyeong001/images/shell/2.png',
+        '../jinyeong001/images/shell/3.png',
+        '../jinyeong001/images/shell/4.png',
+        '../jinyeong001/images/shell/5.png'
     ];
 
     // 전역 스코프에서 함수 사용 가능하도록 window 객체에 할당
