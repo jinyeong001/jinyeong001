@@ -1,19 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentImageIndex = 0;
-    const images = [
-        '../jinyeong001/images/shell/1.png',
-        '../jinyeong001/images/shell/2.png',
-        '../jinyeong001/images/shell/3.png',
-        '../jinyeong001/images/shell/4.png',
-        '../jinyeong001/images/shell/5.png'
-    ];
+    const imageCollections = {
+        shell: [
+            '../jinyeong001/images/shell/1.png',
+            '../jinyeong001/images/shell/2.png',
+            '../jinyeong001/images/shell/3.png',
+            '../jinyeong001/images/shell/4.png',
+            '../jinyeong001/images/shell/5.png'
+        ],
+        flame: [
+            '../jinyeong001/images/flame/1.png',
+            '../jinyeong001/images/flame/2.png',
+            '../jinyeong001/images/flame/3.png',
+            '../jinyeong001/images/flame/4.png',
+            '../jinyeong001/images/flame/5.png',
+            '../jinyeong001/images/flame/6.png',
+            '../jinyeong001/images/flame/7.png'
+        ]
+    };
+    
+    let currentCollection = [];
 
     // 썸네일 생성 함수
     function createThumbnails() {
         const thumbnailsContainer = document.getElementById('galleryThumbnails');
         thumbnailsContainer.innerHTML = ''; // 기존 썸네일 제거
 
-        images.forEach((image, index) => {
+        currentCollection.forEach((image, index) => {
             const thumbnail = document.createElement('img');
             thumbnail.src = image;
             thumbnail.className = 'gallery-thumbnail';
@@ -34,9 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    window.openGallery = function() {
+    window.openGallery = function(project) {
+        currentCollection = imageCollections[project];
         document.getElementById('imageGallery').style.display = 'block';
-        createThumbnails(); // 갤러리 열 때 썸네일 생성
+        currentImageIndex = 0;
+        createThumbnails();
         showImage(0);
     }
 
@@ -45,15 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.changeImage = function(direction) {
-        currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+        currentImageIndex = (currentImageIndex + direction + currentCollection.length) % currentCollection.length;
         showImage(currentImageIndex);
     }
 
     window.showImage = function(index) {
         const galleryImage = document.getElementById('galleryImage');
-        galleryImage.src = images[index];
+        galleryImage.src = currentCollection[index];
         currentImageIndex = index;
-        updateThumbnails(); // 썸네일 활성화 상태 업데이트
+        updateThumbnails();
     }
 
     // ESC 키로 갤러리 닫기
