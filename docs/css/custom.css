@@ -276,8 +276,12 @@
     background: url('../images/flame/flame.png') center 35%/65% no-repeat !important;
 }
 
-.koreait-bg {
-    background: url('../images/koreait.png') center 40%/55% no-repeat !important;
+.nova-bg {
+    background: url('../images/nova.png') center 45%/55% no-repeat !important;
+}
+
+.supsernova-bg {
+    background: url('../images/supernova.png') center 5%/95% no-repeat !important;
 }
 
 .shell-bg {
