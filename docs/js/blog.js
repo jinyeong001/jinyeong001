@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', async function() {
+    // 다크모드 적용
+    document.body.classList.add('dark-mode');
+    
+    // 스크롤 관련 동작 초기화
+    const navbar = document.querySelector('.ftco-navbar-light');
+    if (navbar) {
+        // 초기 상태 설정
+        navbar.style.display = 'block';
+        navbar.style.position = 'fixed';
+        navbar.style.top = '0';
+        navbar.style.background = '#242424';
+        navbar.classList.add('scrolled');
+        
+        // 기존 스크롤 이벤트 리스너 제거 및 새로운 설정 적용
+        window.addEventListener('scroll', function() {
+            navbar.style.display = 'block';
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0';
+            navbar.classList.add('scrolled');
+        });
+    }
+
     // 카테고리별 포스트 로드 함수
     async function loadCategoryPosts(category) {
         try {
