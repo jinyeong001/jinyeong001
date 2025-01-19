@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -307,13 +307,21 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem; 
+  font-weight: 700 !important;
+}
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 2rem; 
+  font-weight: 500 !important;
+}
+  
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 1.2em !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+}
 
 h4, .h4 {
   font-size: 1.5rem; }
@@ -352,7 +360,9 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
 
 small,
 .small {
@@ -416,9 +426,13 @@ mark,
   color: #6c757d; }
 
 code {
+  padding: 3px 8px;  /* 내부 여백 증가 */
   font-size: 87.5%;
   color: #e83e8c;
-  word-break: break-word; }
+  background-color: #f8f9fa;
+  border-radius: 4px;  /* 모서리 둥글게 */
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);  /* 오목한 효과 */
+}
   a > code {
     color: inherit; }
 
@@ -434,9 +448,13 @@ kbd {
     font-weight: 700; }
 
 pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529; }
+  padding: 20px;  /* 내부 여백 증가 */
+  margin: 15px 0;  /* 상하 여백 */
+  background-color: #f8f9fa;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;  /* 모서리 둥글게 */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);  /* 오목한 효과 */
+}
   pre code {
     font-size: inherit;
     color: inherit;
@@ -1822,14 +1840,13 @@ textarea.form-control {
   .was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {
     border-color: #28a745; }
 
-.was-validated .custom-control-input:valid ~ .valid-feedback,
-.was-validated .custom-control-input:valid ~ .valid-tooltip, .custom-control-input.is-valid ~ .valid-feedback,
-.custom-control-input.is-valid ~ .valid-tooltip {
-  display: block; }
-
-.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {
   border-color: #34ce57;
   background-color: #34ce57; }
+
+.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {
+  border-color: #e4606d;
+  background-color: #e4606d; }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
