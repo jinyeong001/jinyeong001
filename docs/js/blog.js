@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // 카테고리별 포스트 로드 함수
     async function loadCategoryPosts(category) {
         try {
-            const response = await fetch(`/posts/${category}/index.json`);
+            const response = await fetch(`/jinyeong001/posts/${category}/index.json`);
             if (!response.ok) {
                 console.error(`Error loading ${category} posts:`, response.statusText);
                 return [];
