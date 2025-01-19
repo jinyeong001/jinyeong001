@@ -322,20 +322,25 @@ body .markdown-body h3 {
 /* 포스트 목록 컨테이너 스타일 */
 .col-lg-3.pl-md-5 {
     padding-left: 20px !important;
-    width: 200px !important;
-    flex: 0 0 200px !important;
-    max-width: 200px !important;
+    width: 300px !important;
+    flex: 0 0 300px !important;
+    max-width: 300px !important;
     padding-top: 30px;
-    margin: 0; /* 마진 제거 */
+    margin: 0;
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    position: fixed;  /* sticky 대신 fixed 사용 */
+    top: 100px;      /* 상단 네비게이션 바 아래에 고정 */
+    left: 80px;      /* 왼쪽 여백 설정 */
 }
 
-/* 중앙 포스트 내용 컨테이너 스타일 */
+/* 중앙 포스트 내용 컨테이너 위치 조정 */
 .col-lg-7 {
-    max-width: 1000px !important;  /* 최대 너비 제한 */
-    flex: 0 0 1000px !important;  /* 크기 고정 */
-    margin: 0 auto;  /* 중앙 정렬 */
-    padding: 0 40px;  /* 내부 여백 */
-    overflow-x: hidden; /* 가로 스크롤 방지 */
+    max-width: 900px !important;
+    flex: 0 0 900px !important;
+    margin-left: 400px !important; /* 왼쪽 포스트 목록 공간 확보 */
+    padding: 0 40px;
+    overflow-x: hidden;
 }
 
 /* 오른쪽 목차 컨테이너 스타일 */
@@ -353,7 +358,7 @@ body .markdown-body h3 {
     font-size: 14px;
     border: none;
     border-radius: 4px;
-    color: #666;
+    color: #555555;
 }
 
 .list-group-item.active {
@@ -436,57 +441,53 @@ body .markdown-body h3 {
 
 /* 카테고리 그룹 스타일 */
 .category-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 5px;     /* 카테고리 그룹 간격 추가 */
+    width: 100%;           /* 너비 100%로 설정 */
 }
 
 .category-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    width: 100%;
     text-align: left;
-    padding: 6px 12px;
-    font-size: 13px;
-    color: #666;
-    background: none;
     border: none;
-    border-radius: 4px;
+    background: transparent;
+    color: #ffffff !important;
+    cursor: default;
+    font-weight: 600;
+    font-size: 1.1em;
+    white-space: nowrap;    /* 텍스트 줄바꿈 방지 */
+    overflow: visible;      /* 내용이 넘쳐도 표시 */
+    min-height: 40px;       /* 최소 높이 설정 */
+}
+
+.category-btn:hover {
+    background-color: transparent;
+}
+
+.posts-container {
+    display: block !important;
+    padding-left: 20px;
+    width: 100%;           /* 너비 100%로 설정 */
+}
+
+.post-item {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 15px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.category-btn:hover {
-    color: #3e64ff;
-    background-color: #f8f9fa;
-}
-
-.category-btn.active {
-    color: #fff;
-    background-color: #3e64ff;
-}
-
-/* 포스트 아이템 컨테이너 스타일 */
-.posts-container {
-    display: none;
-    padding-left: 20px; /* 들여쓰기 */
-}
-
-.posts-container.show {
-    display: block;
-}
-
-/* 포스트 아이템 스타일 */
-.post-item {
-    padding: 6px 12px;
-    font-size: 13px;
-    color: #666;
-    cursor: pointer;
-}
-
 .post-item:hover {
-    color: #3e64ff;
+    color: #ffffff;
+    background-color: rgba(62, 100, 255, 0.1);
 }
 
 .post-item.active {
     color: #3e64ff;
-    font-weight: 500;
+    background-color: rgba(62, 100, 255, 0.2);
 }
 
 /* 다크모드 기본 스타일 */
@@ -727,4 +728,39 @@ body.dark-mode::-webkit-scrollbar-thumb:hover {
 /* 다크모드에서의 구분선 스타일 */
 body.dark-mode .markdown-body hr {
     background-color: #30363d;  /* 다크모드에서의 구분선 색상 */
+}
+
+/* 스크롤바 스타일 */
+.col-lg-3.pl-md-5::-webkit-scrollbar,
+.mdc-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.col-lg-3.pl-md-5::-webkit-scrollbar-track,
+.mdc-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.col-lg-3.pl-md-5::-webkit-scrollbar-thumb,
+.mdc-content::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.3);
+    border-radius: 4px;
+}
+
+/* Firefox 스크롤바 스타일 */
+.col-lg-3.pl-md-5,
+.mdc-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 144, 226, 0.3) transparent;
+}
+
+/* 다크모드 스크롤바 스타일 */
+body.dark-mode .col-lg-3.pl-md-5::-webkit-scrollbar-track,
+body.dark-mode .mdc-content::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+body.dark-mode .col-lg-3.pl-md-5::-webkit-scrollbar-thumb,
+body.dark-mode .mdc-content::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.3);
 }

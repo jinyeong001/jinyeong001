@@ -78,10 +78,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .lab-item-content:hover {
-    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .lab-item h3 {
@@ -424,6 +429,7 @@
     justify-content: center;
     opacity: 0;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .lab-item:hover .lab-item-overlay {
