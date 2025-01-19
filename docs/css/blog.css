@@ -325,13 +325,19 @@ body .markdown-body h3 {
     width: 300px !important;
     flex: 0 0 300px !important;
     max-width: 300px !important;
-    padding-top: 30px;
+    padding-top: 10px !important;
     margin: 0;
     height: calc(100vh - 150px);
     overflow-y: auto;
-    position: fixed;  /* sticky 대신 fixed 사용 */
-    top: 100px;      /* 상단 네비게이션 바 아래에 고정 */
-    left: 80px;      /* 왼쪽 여백 설정 */
+    position: fixed;
+    top: 100px;
+    left: 80px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.col-lg-3.pl-md-5::-webkit-scrollbar {
+    display: none;
 }
 
 /* 중앙 포스트 내용 컨테이너 위치 조정 */
@@ -468,9 +474,12 @@ body .markdown-body h3 {
 }
 
 .posts-container {
-    display: block !important;
-    padding-left: 20px;
-    width: 100%;           /* 너비 100%로 설정 */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.posts-container::-webkit-scrollbar {
+    display: none;
 }
 
 .post-item {
@@ -762,5 +771,54 @@ body.dark-mode .mdc-content::-webkit-scrollbar-track {
 
 body.dark-mode .col-lg-3.pl-md-5::-webkit-scrollbar-thumb,
 body.dark-mode .mdc-content::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.3);
+}
+
+/* 포스트 목록 컨테이너와 관련된 모든 요소의 스크롤바 숨기기 */
+.col-lg-3.pl-md-5,
+.posts-container,
+.category-group,
+#post-items,
+.filter-buttons {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+.col-lg-3.pl-md-5::-webkit-scrollbar,
+.posts-container::-webkit-scrollbar,
+.category-group::-webkit-scrollbar,
+#post-items::-webkit-scrollbar,
+.filter-buttons::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+}
+
+/* 호버 시 스크롤바 보이기 */
+.col-lg-3.pl-md-5:hover {
+    -ms-overflow-style: auto !important;
+    scrollbar-width: thin !important;
+}
+
+.col-lg-3.pl-md-5:hover::-webkit-scrollbar {
+    display: block !important;
+    width: 8px !important;
+}
+
+.col-lg-3.pl-md-5:hover::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.col-lg-3.pl-md-5:hover::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.3);
+    border-radius: 4px;
+}
+
+/* 다크모드 스크롤바 스타일 */
+body.dark-mode .col-lg-3.pl-md-5:hover::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+body.dark-mode .col-lg-3.pl-md-5:hover::-webkit-scrollbar-thumb {
     background: rgba(74, 144, 226, 0.3);
 }
