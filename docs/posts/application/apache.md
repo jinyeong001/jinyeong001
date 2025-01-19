@@ -1,4 +1,5 @@
-# Linux Web Server Apache Build
+# Linux Web Server 'Apache' Build
+---
 
 ## TCP 3-way Handshaking
 1. Web Client -> TCP Sync -> Web Server : Request
@@ -9,10 +10,12 @@ TCP Flags : SYN, ACK, FZN, PSH ...
 
 YUM, DNF(dandfied yum) : 패키지 관리도구
 
+<br><br>
+
 ## APM (Apache, PHP, MySQL or MariaDB)
 수행 환경: Oracle VM VirtualBox
 
-**1. Apache**<br>
+### 1. Apache
 `dnf install -y httpd php mariadb-server` : -y(yes), httpd(Apache), php, mariadb-server 설치 <br>
 `rpm -qa` : 머신에 있는 모든 Red Hat Package 출력 <br>
 `systemctl status httpd` : httpd 서비스 정보 출력 <br>
@@ -24,15 +27,16 @@ YUM, DNF(dandfied yum) : 패키지 관리도구
 `firewall-cmd --reload` : 변경된 방화벽을 적용, 서비스 변경 후 반드시 적용 <br>
 
 Desktop browser: http://VirtualBox IP Address -> 웹페이지 작동 확인<br>
-![Apache 웹서버 테스트](../posts/application/img/apache1.png)
+<img src="../posts/application/img/apache1.png" alt="Apache 웹서버 테스트" width="800px" style="display: block; margin: 0 auto;">
+<br>
 
-**2. PHP**<br>
+### 2. PHP
 `/etc/httpd directory` : web server root directory<br>
 `httpd.conf 파일 (/etc/http.conf)` : httpd server의 구성<br>
 
 `/var/www/html directory` : document root directory<br>
 `vi index.html` or `vi index.php` : 웹페이지 작성<br>
-```
+```html
 <html>
 <body>
     <h1>Hello World</h1>

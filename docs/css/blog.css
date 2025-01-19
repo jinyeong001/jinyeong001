@@ -185,16 +185,30 @@ body {
     color: #000;
 }
 
+/* 마크다운 헤더 스타일 완전 재정의 */
+.markdown-body h3,
+.col-lg-7 .markdown-body h3,
+#post-content .markdown-body h3,
+.tab-content .markdown-body h3,
+body .markdown-body h3 {
+    font-size: 1.0em !important;
+    margin-top: 20px !important;
+    margin-bottom: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+}
+
+/* 기존 마크다운 스타일 초기화 */
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    color: #000;
+    margin-top: 24px !important;
+    margin-bottom: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
 }
 
 .markdown-body h1 {
@@ -228,6 +242,22 @@ body {
     line-height: 1.45;
     background-color: #f6f8fa;
     border-radius: 3px;
+}
+
+.markdown-body img {
+    max-width: 100%;  /* 부모 컨테이너의 너비를 넘지 않도록 제한 */
+    height: auto;     /* 비율 유지 */
+    display: block;   /* 블록 레벨 요소로 설정 */
+    margin: 20px 0;   /* 상하 여백 추가 */
+}
+
+.markdown-body hr {
+    height: 2px;               /* 두께 증가 */
+    background-color: #e1e4e8;
+    border: none;
+    margin: 24px 0;
+    width: 100%;              /* 전체 너비 사용 */
+    clear: both;              /* float 해제 */
 }
 
 /* 네비게이션 바 스타일 */
@@ -305,6 +335,7 @@ body {
     flex: 0 0 1000px !important;  /* 크기 고정 */
     margin: 0 auto;  /* 중앙 정렬 */
     padding: 0 40px;  /* 내부 여백 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 오른쪽 목차 컨테이너 스타일 */
@@ -691,4 +722,9 @@ body.dark-mode::-webkit-scrollbar-thumb:hover {
 /* 컨텐츠 영역 상단 여백 조정 */
 .ftco-section {
     padding-top: 120px !important;
+}
+
+/* 다크모드에서의 구분선 스타일 */
+body.dark-mode .markdown-body hr {
+    background-color: #30363d;  /* 다크모드에서의 구분선 색상 */
 }

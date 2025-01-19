@@ -56,85 +56,87 @@ document.addEventListener('DOMContentLoaded', async function() {
     // 목차 생성 함수
     function generateTOC(content) {
         const tocList = document.getElementById('toc-list');
+        const postContent = document.getElementById('post-content');
         tocList.innerHTML = '';
         
-        // HTML 컨텐츠에서 헤더 추출
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = content;
-        const headers = tempDiv.querySelectorAll('h1, h2, h3');
+        // 컨텐츠를 실제 DOM에 적용
+        postContent.innerHTML = content;
         
-        // 헤더 요소들의 위치를 추적하기 위한 배열
+        // 실제 DOM에서 헤더 요소들을 찾음
+        const headers = postContent.querySelectorAll('h1, h2, h3');
         const headerPositions = [];
         
         headers.forEach((header, index) => {
-            const level = parseInt(header.tagName.charAt(1));
             const headerId = `section-${index}`;
+            header.id = headerId;
             
-            // 원본 헤더에 ID 추가
-            const originalHeader = document.querySelector(`${header.tagName}:nth-of-type(${index + 1})`);
-            if (originalHeader) {
-                originalHeader.id = headerId;
-                // 헤더 위치 정보 저장
-                headerPositions.push({
-                    id: headerId,
-                    top: originalHeader.offsetTop - 100 // 네비게이션 바 높이 고려
-                });
-            }
-            
-            // 목차 항목 생성
             const li = document.createElement('li');
             li.className = 'nav-item';
+            const level = parseInt(header.tagName.charAt(1));
             li.style.paddingLeft = `${(level - 1) * 15}px`;
             
             const link = document.createElement('a');
             link.className = 'nav-link';
             link.href = `#${headerId}`;
             link.textContent = header.textContent;
+            
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const target = document.getElementById(headerId);
                 if (target) {
+                    const offset = target.offsetTop - 100;
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: offset,
                         behavior: 'smooth'
                     });
+                    
+                    // 클릭한 링크 활성화
+                    document.querySelectorAll('#toc-list .nav-link').forEach(l => {
+                        l.classList.remove('active');
+                    });
+                    link.classList.add('active');
                 }
             });
             
             li.appendChild(link);
             tocList.appendChild(li);
+            
+            // 헤더 위치 저장
+            headerPositions.push({
+                id: headerId,
+                top: header.offsetTop
+            });
         });
 
         // 스크롤 이벤트 핸들러
         const handleScroll = () => {
-            const scrollPosition = window.scrollY;
+            const scrollPosition = window.scrollY + 150;
+            let activeSection = null;
             
             // 현재 스크롤 위치에 해당하는 섹션 찾기
-            let currentSection = headerPositions[0]?.id;
-            
             for (let i = 0; i < headerPositions.length; i++) {
                 if (scrollPosition >= headerPositions[i].top) {
-                    currentSection = headerPositions[i].id;
-                } else {
-                    break;
+                    activeSection = headerPositions[i].id;
                 }
             }
             
-            // 목차 항목 하이라이트 업데이트
-            document.querySelectorAll('#toc-list .nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
+            // 목차 항목 활성화 상태 업데이트
+            if (activeSection) {
+                document.querySelectorAll('#toc-list .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${activeSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         };
 
-        // 기존 스크롤 이벤트 리스너 제거 후 새로 추가
+        // 스크롤 이벤트 리스너 등록
         window.removeEventListener('scroll', handleScroll);
         window.addEventListener('scroll', handleScroll);
         
-        // 초기 스크롤 위치에 대한 하이라이트 설정
-        handleScroll();
+        // 초기 활성화 상태 설정
+        setTimeout(handleScroll, 200);
     }
 
     // 포스트 목록 생성 함수
