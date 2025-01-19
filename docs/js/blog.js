@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     async function loadCategoryPosts(category) {
         try {
             const response = await fetch(`/jinyeong001/posts/${category}/index.json`);
+            // const response = await fetch(`/posts/${category}/index.json`);
             if (!response.ok) {
                 console.error(`Error loading ${category} posts:`, response.statusText);
                 return [];
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     async function loadMarkdownPost(category, filename) {
         try {
             const response = await fetch(`/jinyeong001/posts/${category}/${filename}`);
+            // const response = await fetch(`/posts/${category}/${filename}`);
             const markdown = await response.text();
             // marked.js를 사용하여 마크다운을 HTML로 변환
             const html = marked.parse(markdown);
