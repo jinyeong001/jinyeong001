@@ -1,0 +1,403 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 144, 226, 0.3) transparent;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #f8f9fa;
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--text-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-color);
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 144, 226, 0.3);
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(74, 144, 226, 0.5);
+}
+
+.mdc {
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    padding: 0px;
+}
+
+.mdc-content {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 400px;
+    max-height: calc(105vh - 150px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 144, 226, 0.3) transparent;
+}
+
+.mdc-pin {
+    max-height: calc(109vh - 150px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 144, 226, 0.3) transparent;
+    padding: 10px;
+    border-left: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+/* 웹킷 기반 브라우저를 위한 스크롤바 스타일 */
+.mdc-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mdc-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.mdc-content::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.3);
+    border-radius: 4px;
+}
+
+.mdl {
+    border-right: 1px solid var(--primary-color);
+    padding: 0px;
+}
+
+/* 블로그 섹션 스타일링 */
+#blog-section {
+    padding-top: 7em;
+    background: #fff;
+}
+
+/* 사이드바 스타일링 */
+.sidebar {
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar .list-group-item {
+    border: none;
+    padding: 10px 15px;
+    color: #000;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar .list-group-item:hover,
+.sidebar .list-group-item.active {
+    background: rgba(0, 0, 0, 0.05);
+    color: #3e64ff;
+}
+
+/* 메인 컨텐츠 영역 */
+.main-content {
+    padding: 20px 40px;
+    background: #fff;
+}
+
+.main-content .tab-content {
+    padding: 20px 0;
+}
+
+/* 목차 사이드바 */
+.toc-sidebar {
+    padding: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.toc-content {
+    position: sticky;
+    top: 100px;
+}
+
+.toc-content a {
+    display: block;
+    padding: 5px 15px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.toc-content a:hover {
+    color: #3e64ff;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 마크다운 컨텐츠 스타일링 */
+.markdown-body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.markdown-body h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body p {
+    margin-bottom: 16px;
+}
+
+.markdown-body code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+}
+
+.markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+.ftco-navbar-light {
+    background: #fff !important;
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-transform: translateY(0) !important;
+    -ms-transform: translateY(0) !important;
+    transform: translateY(0) !important;
+    height: 80px;
+}
+
+/* 섹션 스타일 */
+.ftco-section {
+    padding-top: 150px !important;
+    position: relative;
+}
+
+/* 포스트 목록 컨테이너 스타일 */
+.col-lg-3.pl-md-5 {
+    padding-left: 20px !important;
+    max-width: 250px;
+    padding-top: 30px;
+}
+
+/* 오른쪽 목차 컨테이너 스타일 */
+.col-lg-2 {
+    padding-right: 20px !important;  /* 오른쪽 여백 추가 */
+}
+
+/* 포스트 목록 아이템 스타일 */
+.list-group-item {
+    padding: 8px 15px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    color: #666;
+}
+
+.list-group-item.active {
+    background-color: #3e64ff;
+    color: white;
+}
+
+/* 포스트 내용 스타일 */
+.tab-content {
+    padding: 20px;
+}
+
+.post-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+/* 목차 스타일 */
+.toc {
+    position: fixed;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    width: 250px;  /* 고정 너비 설정 */
+    top: 100px !important;
+    right: 20px;  /* 오른쪽 여백 */
+}
+
+/* 목차 내부 스타일 */
+.toc-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#toc-list {
+    padding-left: 0;
+    width: 100%;  /* 목차 리스트 너비 설정 */
+}
+
+#toc-list .nav-item {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    width: 100%;  /* 목차 아이템 너비 설정 */
+}
+
+#toc-list .nav-link {
+    padding: 3px 0;
+    color: #666;
+    white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
+    overflow: hidden;     /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis;  /* 넘치는 텍스트에 ... 표시 */
+    display: block;
+    width: 100%;  /* 링크 너비 설정 */
+}
+
+/* 스티키 포지션 조정 */
+.sticky-top {
+    z-index: 1000;
+}
+
+/* 카테고리 버튼 컨테이너 스타일 */
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 카테고리 그룹 스타일 */
+.category-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-btn {
+    text-align: left;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #666;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    color: #3e64ff;
+    background-color: #f8f9fa;
+}
+
+.category-btn.active {
+    color: #fff;
+    background-color: #3e64ff;
+}
+
+/* 포스트 아이템 컨테이너 스타일 */
+.posts-container {
+    display: none;
+    padding-left: 20px; /* 들여쓰기 */
+}
+
+.posts-container.show {
+    display: block;
+}
+
+/* 포스트 아이템 스타일 */
+.post-item {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+}
+
+.post-item:hover {
+    color: #3e64ff;
+}
+
+.post-item.active {
+    color: #3e64ff;
+    font-weight: 500;
+}
