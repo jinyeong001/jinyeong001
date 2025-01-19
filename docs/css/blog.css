@@ -252,16 +252,35 @@ body {
     position: relative;
 }
 
+/* 전체 컨테이너 스타일 */
+.container-fluid {
+    padding-left: 80px !important;  /* 좌측 여백 증가 */
+    padding-right: 80px !important; /* 우측 여백 증가 */
+}
+
 /* 포스트 목록 컨테이너 스타일 */
 .col-lg-3.pl-md-5 {
     padding-left: 20px !important;
-    max-width: 250px;
+    width: 200px !important;  /* 너비 고정 */
+    flex: 0 0 200px !important;  /* 크기 고정 */
+    max-width: 200px !important;
     padding-top: 30px;
+}
+
+/* 중앙 포스트 내용 컨테이너 스타일 */
+.col-lg-7 {
+    max-width: 1000px !important;  /* 최대 너비 제한 */
+    flex: 0 0 1000px !important;  /* 크기 고정 */
+    margin: 0 auto;  /* 중앙 정렬 */
+    padding: 0 40px;  /* 내부 여백 */
 }
 
 /* 오른쪽 목차 컨테이너 스타일 */
 .col-lg-2 {
-    padding-right: 20px !important;  /* 오른쪽 여백 추가 */
+    padding-right: 20px !important;
+    width: 200px !important;  /* 너비 고정 */
+    flex: 0 0 200px !important;  /* 크기 고정 */
+    max-width: 200px !important;
 }
 
 /* 포스트 목록 아이템 스타일 */
@@ -294,41 +313,46 @@ body {
 .toc {
     position: fixed;
     padding: 15px;
-    background: #f8f9fa;
-    border-radius: 5px;
-    width: 250px;  /* 고정 너비 설정 */
+    width: 200px !important;
     top: 100px !important;
-    right: 20px;  /* 오른쪽 여백 */
+    right: 80px;
+    background: none !important; /* 배경 제거 */
+    border: none !important;    /* 테두리 제거 */
 }
 
-/* 목차 내부 스타일 */
 .toc-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #666;
+    text-transform: uppercase; /* 대문자로 변경 */
 }
 
 #toc-list {
     padding-left: 0;
-    width: 100%;  /* 목차 리스트 너비 설정 */
 }
 
 #toc-list .nav-item {
     font-size: 13px;
     line-height: 1.4;
-    margin-bottom: 5px;
-    width: 100%;  /* 목차 아이템 너비 설정 */
+    margin-bottom: 8px;
 }
 
 #toc-list .nav-link {
     padding: 3px 0;
     color: #666;
-    white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
-    overflow: hidden;     /* 넘치는 텍스트 숨김 */
-    text-overflow: ellipsis;  /* 넘치는 텍스트에 ... 표시 */
-    display: block;
-    width: 100%;  /* 링크 너비 설정 */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#toc-list .nav-link:hover {
+    color: #3e64ff;
+}
+
+#toc-list .nav-link.active {
+    color: #3e64ff;
+    font-weight: 500;
+    position: relative;
 }
 
 /* 스티키 포지션 조정 */
@@ -400,4 +424,131 @@ body {
 .post-item.active {
     color: #3e64ff;
     font-weight: 500;
+}
+
+/* 다크모드 기본 스타일 */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* 네비게이션 바 다크모드 */
+body.dark-mode .ftco-navbar-light {
+    background: #242424 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .ftco-navbar-light .navbar-brand {
+    color: #ffffff;
+}
+
+body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+    color: #3e64ff !important;
+}
+
+/* 카테고리 버튼 다크모드 */
+body.dark-mode .category-btn {
+    color: #e0e0e0;
+    background: none;
+}
+
+body.dark-mode .category-btn:hover {
+    color: #3e64ff;
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .category-btn.active {
+    color: #fff;
+    background-color: #3e64ff;
+}
+
+/* 포스트 아이템 다크모드 */
+body.dark-mode .post-item {
+    color: #e0e0e0;
+}
+
+body.dark-mode .post-item:hover {
+    color: #3e64ff;
+}
+
+body.dark-mode .post-item.active {
+    color: #3e64ff;
+}
+
+/* 목차 다크모드 */
+body.dark-mode .toc {
+    background: #242424;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .toc-title {
+    color: #b0b0b0;
+}
+
+body.dark-mode #toc-list .nav-link {
+    color: #b0b0b0;
+}
+
+body.dark-mode #toc-list .nav-link:hover {
+    color: #3e64ff;
+}
+
+body.dark-mode #toc-list .nav-link.active {
+    color: #3e64ff;
+}
+
+/* 포스트 내용 다크모드 */
+body.dark-mode #post-content {
+    color: #e0e0e0;
+}
+
+body.dark-mode #post-content h1,
+body.dark-mode #post-content h2,
+body.dark-mode #post-content h3,
+body.dark-mode #post-content h4,
+body.dark-mode #post-content h5,
+body.dark-mode #post-content h6 {
+    color: #ffffff;
+}
+
+body.dark-mode #post-content a {
+    color: #3e64ff;
+}
+
+body.dark-mode #post-content code {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-mode #post-content pre {
+    background-color: #2a2a2a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #post-content blockquote {
+    background-color: #242424;
+    border-left: 4px solid #3e64ff;
+}
+
+/* 스크롤바 다크모드 */
+body.dark-mode::-webkit-scrollbar {
+    width: 12px;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+    background-color: #3e3e3e;
+    border-radius: 6px;
+    border: 3px solid #1a1a1a;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+    background-color: #4a4a4a;
 }
