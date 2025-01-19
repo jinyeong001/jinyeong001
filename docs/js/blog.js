@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // 마크다운 파일 로드 및 변환 함수
     async function loadMarkdownPost(category, filename) {
         try {
-            const response = await fetch(`/posts/${category}/${filename}`);
+            const response = await fetch(`/jinyeong001/posts/${category}/${filename}`);
             const markdown = await response.text();
             // marked.js를 사용하여 마크다운을 HTML로 변환
             const html = marked.parse(markdown);
