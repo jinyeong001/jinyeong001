@@ -63,10 +63,12 @@ body {
   outline: 0 !important; }
 
 hr {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible; }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);  /* 흰색으로 변경, 약간 투명하게 */
+  width: 100%;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -157,9 +159,12 @@ samp {
   font-size: 1em; }
 
 pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto; }
+  background-color: #2d2d2d;  /* 백그라운드 색상 유지 */
+  border: none !important;    /* border 제거 */
+  border-radius: 4px;        /* 모서리 둥글게 유지 */
+  padding: 1em;              /* 패딩 유지 */
+  margin: 0.5em 0;           /* 마진 유지 */
+}
 
 figure {
   margin: 0 0 1rem; }
@@ -360,7 +365,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);  /* 흰색으로 변경, 약간 투명하게 */
   width: 100%;
 }
 
@@ -448,12 +453,11 @@ kbd {
     font-weight: 700; }
 
 pre {
-  padding: 5px;  /* 내부 여백 증가 */
-  margin: 15px 0;  /* 상하 여백 */
-  background-color: #f8f9fa;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;  /* 모서리 둥글게 */
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);  /* 오목한 효과 */
+  background-color: #2d2d2d;  /* 백그라운드 색상 유지 */
+  border: none !important;    /* border 제거 */
+  border-radius: 4px;        /* 모서리 둥글게 유지 */
+  padding: 1em;              /* 패딩 유지 */
+  margin: 0.5em 0;           /* 마진 유지 */
 }
 pre code {
   font-size: inherit;
@@ -8465,9 +8469,9 @@ h1, h2, h3, h4, h5,
   font-weight: 600;
   text-transform: uppercase; }
   .slider-text .breadcrumbs span {
-    color: rgba(0, 0, 0, 0.8); }
+    color: rgba(255, 255, 255, 0.8); }
     .slider-text .breadcrumbs span i {
-      color: rgba(0, 0, 0, 0.8); }
+      color: rgba(255, 255, 255, 0.8); }
     .slider-text .breadcrumbs span a {
       color: #3e64ff; }
       .slider-text .breadcrumbs span a:hover, .slider-text .breadcrumbs span a:focus {
@@ -8477,7 +8481,7 @@ h1, h2, h3, h4, h5,
 
 .slider-text .bread {
   font-weight: 700;
-  color: #000000;
+  color: #ffffff;
   font-size: 60px; }
 
 .mouse {
@@ -8672,14 +8676,14 @@ h1, h2, h3, h4, h5,
       width: calc(100% - 130px); }
       .ftco-about ul.about-info li span:first-child {
         font-weight: 600;
-        color: #000000;
+        color: #ffffff;
         width: 130px; }
 
 .ftco-about .counter-wrap .text p {
   font-size: 20px; }
   .ftco-about .counter-wrap .text p span {
     font-weight: 400;
-    color: #000000; }
+    color: #ffffff; }
   .ftco-about .counter-wrap .text p span.number {
     font-weight: 600;
     color: #3e64ff; }
@@ -8697,7 +8701,7 @@ h1, h2, h3, h4, h5,
     list-style: none;
     margin-bottom: 10px; }
     #navi li a {
-      color: #000000; }
+      color: #ffffff; }
       #navi li a.current {
         color: #3e64ff;
         margin-left: 20px;
@@ -8728,7 +8732,7 @@ h1, h2, h3, h4, h5,
 .resume-wrap {
   width: 100%;
   margin-bottom: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 10px; }
   .resume-wrap .icon {
     width: 50px;
@@ -8746,7 +8750,7 @@ h1, h2, h3, h4, h5,
   .resume-wrap .date {
     font-weight: 700;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
     color: #3e64ff; }
   .resume-wrap h2 {
     font-size: 24px;
@@ -8754,7 +8758,7 @@ h1, h2, h3, h4, h5,
   .resume-wrap .position {
     font-size: 18px;
     font-weight: 700;
-    color: #000000; }
+    color: #ffffff; }
 
 .ftco-partner {
   padding: 4em 0 !important; }
@@ -8785,7 +8789,7 @@ h1, h2, h3, h4, h5,
     letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
-    color: #000000; }
+    color: #ffffff; }
     .services-1 .desc h3:after {
       position: absolute;
       bottom: -15px;
@@ -8809,7 +8813,7 @@ h1, h2, h3, h4, h5,
     margin-bottom: 10px;
     color: #3e64ff; }
   .services-1 .desc p {
-    color: rgba(0, 0, 0, 0.7); }
+    color: rgba(255, 255, 255, 0.7); }
   .services-1:hover {
     background: #3e64ff; }
     .services-1:hover .icon i {
@@ -9133,7 +9137,7 @@ textarea.form-control {
   .ftco-footer .ftco-heading-2 {
     font-size: 17px;
     font-weight: 400;
-    color: #000000; }
+    color: #ffffff; }
 
 .ftco-footer-social li {
   list-style: none;
@@ -9206,7 +9210,7 @@ textarea.form-control {
     display: block;
     margin-bottom: 5px;
     text-transform: uppercase;
-    color: black;
+    color: #ffffff;
     letter-spacing: 3px; }
   .heading-section h1.big {
     position: absolute;
@@ -9287,7 +9291,7 @@ textarea.form-control {
 .ftco-counter .text span {
   display: block;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 
 @media (max-width: 767.98px) {
   .ftco-counter .counter-wrap {
@@ -9330,7 +9334,7 @@ textarea.form-control {
       margin-bottom: 16px;
       font-weight: 500; }
       .blog-entry .text .heading a {
-        color: #000000; }
+        color: #ffffff; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
           color: #3e64ff; }
   .blog-entry .meta {
@@ -9390,7 +9394,7 @@ textarea.form-control {
       border: 1px solid transparent; }
 
 .contact-section .contact-info p a {
-  color: #1a1a1a; }
+  color: #ffffff; }
 
 .contact-section .box {
   width: 100%;
@@ -9460,14 +9464,14 @@ textarea.form-control {
     font-size: 18px;
     font-weight: 300; }
     .block-21 .text .heading a {
-      color: #000000; }
+      color: #ffffff; }
       .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
         color: #3e64ff; }
   .block-21 .text .meta > div {
     display: inline-block;
     margin-right: 5px; }
     .block-21 .text .meta > div a {
-      color: #4d4d4d;
+      color: #ffffff;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -9539,8 +9543,8 @@ textarea.form-control {
         margin-bottom: 20px; }
       .comment-list li .comment-body .reply {
         padding: 5px 10px;
-        background: rgba(0, 0, 0, 0.1);
-        color: #000000;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: .1em;
@@ -9592,7 +9596,7 @@ textarea.form-control {
       padding-bottom: 0; }
     .categories li a, .sidelink li a {
       display: block;
-      color: #000000; }
+      color: #ffffff; }
       .categories li a span, .sidelink li a span {
         position: absolute;
         right: 0;
@@ -9601,7 +9605,7 @@ textarea.form-control {
       .categories li a:hover, .categories li a:focus, .sidelink li a:hover, .sidelink li a:focus {
         color: #3e64ff; }
     .categories li.active a, .sidelink li.active a {
-      color: #000000;
+      color: #ffffff;
       font-style: italic; }
 
 #ftco-loader {
