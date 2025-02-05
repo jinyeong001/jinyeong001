@@ -34,7 +34,7 @@
 
   - <a href="https://github.com/JJH0204/Ignite_CTF">CTF Ignite</a><br>
   - <a href="https://github.com/JJH0204/Flame">Flame WarGame</a><br>
-  - <a href="https://github.com/jinyeong001/DevSecOps.Full-Project">Nova/Supernova</a><br>
+  - <a href="https://jinyeong.gitbook.io/devsecops">Nova/Supernova</a><br>
 
 ###
 
