@@ -41,7 +41,7 @@
 <h2 align="left">🔗 Sites</h3>
   <div style="margin: 0; text-align: left;">
     <a href="https://jinyeong001.github.io/portfolio/">
-      <img src="https://img.shields.io/badge/Portfolio-222222?style=for-the-badge&logo=GitHub Pages&logoColor=white">
+       <img src="https://img.shields.io/badge/Portfolio-222222?style=for-the-badge&logo=GitHub Pages&logoColor=white">
     </a>
     <a href="https://jinyeong.gitbook.io/blog">
        <img src="https://img.shields.io/badge/Blog-2962FF?style=for-the-badge&logo=GitBook&logoColor=white">
